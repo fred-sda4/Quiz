@@ -1,2 +1,10 @@
+com/sda4/fred/quiz/model/Answer.class
+com/sda4/fred/quiz/controller/QuestionController.class
+com/sda4/fred/quiz/repository/QuestionRepository.class
+com/sda4/fred/quiz/model/User.class
 com/sda4/fred/quiz/QuizApplication.class
 com/sda4/fred/quiz/ServletInitializer.class
+com/sda4/fred/quiz/repository/UserRepository.class
+com/sda4/fred/quiz/service/QuestionService.class
+com/sda4/fred/quiz/model/Question.class
+com/sda4/fred/quiz/controller/UserController.class

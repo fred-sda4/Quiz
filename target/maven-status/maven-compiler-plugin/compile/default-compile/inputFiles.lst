@@ -1,2 +1,10 @@
+/Users/madalinprecup/fred/Quiz/src/main/java/com/sda4/fred/quiz/controller/QuestionController.java
 /Users/madalinprecup/fred/Quiz/src/main/java/com/sda4/fred/quiz/QuizApplication.java
+/Users/madalinprecup/fred/Quiz/src/main/java/com/sda4/fred/quiz/repository/QuestionRepository.java
+/Users/madalinprecup/fred/Quiz/src/main/java/com/sda4/fred/quiz/repository/UserRepository.java
+/Users/madalinprecup/fred/Quiz/src/main/java/com/sda4/fred/quiz/model/User.java
+/Users/madalinprecup/fred/Quiz/src/main/java/com/sda4/fred/quiz/model/Question.java
+/Users/madalinprecup/fred/Quiz/src/main/java/com/sda4/fred/quiz/model/Answer.java
+/Users/madalinprecup/fred/Quiz/src/main/java/com/sda4/fred/quiz/controller/UserController.java
 /Users/madalinprecup/fred/Quiz/src/main/java/com/sda4/fred/quiz/ServletInitializer.java
+/Users/madalinprecup/fred/Quiz/src/main/java/com/sda4/fred/quiz/service/QuestionService.java
