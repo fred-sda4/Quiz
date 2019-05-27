@@ -16,7 +16,7 @@ public class QuestionService {
 
         return  repository.findAll();
     }
-    
+
     //create
     //1.void daca vreau sa creez entitatea si nu ma mai intereseaza == vad din alt modul/vad din alta pagina
     //2. integer == entity id (REST) => ii dau UI-uilui id-ul resursei nou create
