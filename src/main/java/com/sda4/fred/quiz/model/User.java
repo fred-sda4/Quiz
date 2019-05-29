@@ -1,11 +1,18 @@
 package com.sda4.fred.quiz.model;
 
+import javax.persistence.*;
+
+@Entity
 public class User {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id ;
 
+    @Column(name = "mail")
     private String mail ;
 
+    @Column(name = "password")
     private String password ;
 
     public Integer getId() {

@@ -22,12 +22,17 @@ public class QuestionService {
     //2. integer == entity id (REST) => ii dau UI-uilui id-ul resursei nou create
     //3. entity nou creata => dupa creare sunt redirectat pe detalii
 
+    public void createQuestion(Question question) {
+        repository.save(question); // se aloca id din baza de date
+    }
+
+
     public Question updateQuestion(Question question){
 
         return null ;
     }
 
-    public void delete(Question question) {
+    public void deleteQuestion(Question question) {
 
 
     }

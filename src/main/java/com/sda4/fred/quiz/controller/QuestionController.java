@@ -24,8 +24,9 @@ public class QuestionController {
         if (questions.isEmpty()){
 
             return new ResponseEntity<List<Question>>(HttpStatus.NO_CONTENT);
-        }
+        }else {
 
-        return new ResponseEntity<List<Question>>(questions , HttpStatus.OK);
+            return new ResponseEntity<List<Question>>(questions, HttpStatus.OK);
+        }
     }
 }

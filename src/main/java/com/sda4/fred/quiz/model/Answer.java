@@ -14,7 +14,7 @@ public class Answer {
     @Column(name = "correct")
     private boolean correct;
 
-    @ManyToOne()
+    @ManyToOne
     @JoinColumn(name = "question_id")
     private Question question ;
 

@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class UserController {
 
     @Autowired
-
     private UserRepository userRepository ;
 
     @GetMapping(path = "/add")
@@ -30,7 +29,7 @@ public class UserController {
 
     }
 
-    @GetMapping(path = "all")
+    @GetMapping(path = "/all")
     public @ResponseBody Iterable<User>getAllUsers(){
 
         return userRepository.findAll();
