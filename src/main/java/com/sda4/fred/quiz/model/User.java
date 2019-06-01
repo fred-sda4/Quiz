@@ -1,6 +1,7 @@
 package com.sda4.fred.quiz.model;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 public class User {
@@ -9,11 +10,30 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id ;
 
-    @Column(name = "mail")
-    private String mail ;
+    @Column(name = "email")
+    private String email ;
 
     @Column(name = "password")
     private String password ;
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    @OneToMany(mappedBy = "user", fetch = FetchType.EAGER)
+    private Set<Quiz> quizzes ;
+
+    public Set<Quiz> getQuizzes() {
+        return quizzes;
+    }
+
+    public void setQuizzes(Set<Quiz> quizzes) {
+        this.quizzes = quizzes;
+    }
 
     public Integer getId() {
         return id;
@@ -24,11 +44,11 @@ public class User {
     }
 
     public String getMail() {
-        return mail;
+        return email;
     }
 
     public void setMail(String mail) {
-        this.mail = mail;
+        this.email = mail;
     }
 
     public String getPassword() {

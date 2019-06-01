@@ -17,6 +17,9 @@ public class Question {
     @OneToMany(mappedBy = "question" , fetch = FetchType.EAGER)
     private List<Answer> answers ;
 
+   @ManyToOne
+   private Category questionCategory ;
+
     public Long getId() {
         return id;
     }

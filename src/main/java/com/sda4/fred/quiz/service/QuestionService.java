@@ -4,14 +4,17 @@ import com.sda4.fred.quiz.model.Question;
 import com.sda4.fred.quiz.repository.QuestionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 @Service
+@Transactional
 public class QuestionService {
 
     @Autowired
     private QuestionRepository repository ;
 
+    @Transactional(readOnly = true)
     public List<Question> findAll(){
 
         return  repository.findAll();
@@ -35,6 +38,12 @@ public class QuestionService {
     public void deleteQuestion(Question question) {
 
 
+    }
+
+    @Transactional(readOnly = true)
+    public Question getById(Long id){
+
+        return repository.getOne(id);
     }
 
 

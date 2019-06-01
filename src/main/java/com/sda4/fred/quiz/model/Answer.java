@@ -6,6 +6,7 @@ import javax.persistence.*;
 public class Answer {
 
     @Id
+    @GeneratedValue( strategy = GenerationType.AUTO)
     private Long id ;
 
     @Column(name = "text")
