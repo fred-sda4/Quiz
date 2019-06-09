@@ -14,3 +14,11 @@
     <title>Hello, world!</title>
 </head>
 <body>
+    <table align="center">
+    <tr>
+    <td><a href="#">Home</a></td>
+    <td><a href="#">Tutorials</a></td>
+    <td><a href="#">Contact</a></td>
+    </tr>
+    </table>
+    <hr/>

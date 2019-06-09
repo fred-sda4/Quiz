@@ -1,0 +1,8 @@
+table, th, td, div {
+    border: 1px solid blue;
+    background-color: bisque;
+}
+button:hover {
+    color: red;
+    background-color: yellow;
+}
