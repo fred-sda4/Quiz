@@ -16,6 +16,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 @Controller
 @RequestMapping(path="/quiz")
+@SessionAttributes("quiz")
 public class QuizController {
 
     @Autowired
@@ -30,7 +31,12 @@ public class QuizController {
     @Autowired
     AnswerService answerService;
 
-    @PostMapping(path = "/quiz")
+    @ModelAttribute("question")
+    public Question setUpUserForm() {
+        return questionService.getById(1l);
+    }
+
+    @PostMapping(path = "")
     public ModelAndView authenticatUser(@SessionAttribute("user")User user , ModelMap model) throws NotAuthorizedException {
 
         if (user == null) {
@@ -38,7 +44,7 @@ public class QuizController {
             throw new IllegalArgumentException("User object is null !!! ") ;
         }
 
-        Quiz quiz = quizService.createQuiz(user);
+        Quiz quiz = quizService.addQuestionsById(quizService.createQuiz(user),1L);
         Question question = questionService.getById(1L);
 
         model.put("user", user);

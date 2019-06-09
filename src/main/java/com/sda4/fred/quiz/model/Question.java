@@ -18,7 +18,24 @@ public class Question {
     private List<Answer> answers ;
 
    @ManyToOne
+   @JoinColumn(name = "category_id")
    private Category questionCategory ;
+
+    public List<Answer> getAnswers() {
+        return answers;
+    }
+
+    public void setAnswers(List<Answer> answers) {
+        this.answers = answers;
+    }
+
+    public Category getQuestionCategory() {
+        return questionCategory;
+    }
+
+    public void setQuestionCategory(Category questionCategory) {
+        this.questionCategory = questionCategory;
+    }
 
     public Long getId() {
         return id;

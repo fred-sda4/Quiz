@@ -9,14 +9,13 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
-
 public class UserController {
 
     @Autowired
     private UserRepository userRepository ;
 
     @Autowired
-    UserService userService;
+    private UserService userService;
 
 
     @GetMapping(path = "/all")

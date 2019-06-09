@@ -12,8 +12,11 @@ public class Answer {
     @Column(name = "text")
     private String text ;
 
-    @Column(name = "correct")
+    @Column(name="correct")
     private boolean correct;
+
+    @Column(name="checked")
+    private boolean checked;
 
     @ManyToOne
     @JoinColumn(name = "question_id")
@@ -35,6 +38,14 @@ public class Answer {
         this.text = text;
     }
 
+    public Question getQuestion() {
+        return question;
+    }
+
+    public void setQuestion(Question question) {
+        this.question = question;
+    }
+
     public boolean isCorrect() {
         return correct;
     }
@@ -43,11 +54,11 @@ public class Answer {
         this.correct = correct;
     }
 
-    public Question getQuestion() {
-        return question;
+    public boolean isChecked() {
+        return checked;
     }
 
-    public void setQuestion(Question question) {
-        this.question = question;
+    public void setChecked(boolean checked) {
+        this.checked = checked;
     }
 }

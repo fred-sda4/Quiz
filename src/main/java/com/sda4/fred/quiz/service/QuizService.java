@@ -1,5 +1,6 @@
 package com.sda4.fred.quiz.service;
 
+import com.sda4.fred.quiz.model.Question;
 import com.sda4.fred.quiz.model.Quiz;
 import com.sda4.fred.quiz.model.User;
 import com.sda4.fred.quiz.repository.QuizRepository;
@@ -19,6 +20,13 @@ public class QuizService {
     @Autowired
     UserRepository userRepository ;
 
+    @Autowired
+    QuestionService questionService;
+
+    @Autowired
+    AnswerService answerService ;
+
+
     public Quiz createQuiz(Quiz quiz) {
 
         return quizRepository.save(quiz);
@@ -26,11 +34,31 @@ public class QuizService {
 
     public Quiz createQuiz(User user) {
 
+
+        User dbUser = userRepository.getOne(user.getId());
         Quiz quiz = new Quiz();
-        quiz.setUser(user);
-        user.getQuizzes().add(quizRepository.save(quiz));
+        quiz.setUser(dbUser);
+        user.getQuizzes().add((quiz));
         userRepository.save(user);
 
-        return quiz ;
+        return quizRepository.save(quiz) ;
     }
+
+    public Quiz addQuestionsById(Quiz quiz , Long id){
+
+        quiz = quizRepository.getOne(quiz.getId());
+
+        Question question =questionService.getById(id);
+
+        quiz.getQuestions().add(question);
+
+        return quizRepository.save(quiz);
+    }
+
+    public Quiz getById(Long quizId) {
+
+        return quizRepository.getOne(quizId);
+    }
+
+
 }

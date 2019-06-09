@@ -12,18 +12,18 @@ import org.springframework.transaction.annotation.Transactional;
 public class UserService {
 
     @Autowired
-    private UserRepository repository ;
+    private UserRepository userRepository ;
 
     @Transactional(readOnly = true)
     public User getByEmail(String email) {
 
-        return repository.findOneByEmail(email);
+        return userRepository.findOneByEmail(email);
     }
 
     @Transactional(readOnly = true)
     public User getById(Integer id){
 
-        return repository.getOne(id);
+        return userRepository.getOne(id);
     }
 
 
