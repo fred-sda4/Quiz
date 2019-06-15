@@ -3,10 +3,7 @@ package com.sda4.fred.quiz.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.sda4.fred.quiz.exception.NotAuthorizedException;
@@ -26,7 +23,7 @@ public class LoginController {
       return new User();
     }
 	 
-	@GetMapping("/")
+	@RequestMapping(value = {"/", "/home"}, method = {RequestMethod.POST, RequestMethod.GET})
     public String index() {
       return "login";
     }

@@ -4,19 +4,20 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
 
-${user}
+<%-- ${user} --%>
 <spring:url value="/quiz" var="url" htmlEscape="true"/>
-<div class="container" >
-	<div class="form-row text-center">
-	<div class="col-sm-4" ></div>
-	<div class="col-sm-4" >
-		<div class="col text-center"></div>
-		<form:form id="form" modelAttribute="user" method="post" action="${url}" class="form-signin">
-	     <div class="form-group">
-			<form:button class="btn btn-lg btn-primary btn-block">Start quiz</form:button>
-		</div>
-	</form:form>
-	</div>
-	<div class="col-sm-4" ></div>
+<div class="container">
+    <div class="form-row text-center">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4">
+            <div class="col text-center"></div>
+            <form:form id="form" modelAttribute="user" method="post" action="${url}" class="form-signin">
+                <div class="form-group">
+                    <form:button class="btn btn-lg btn-primary btn-block">Start quiz</form:button>
+                </div>
+            </form:form>
+        </div>
+        <div class="col-sm-4"></div>
 
+    </div>
 </div>

@@ -2,7 +2,7 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags" %>
 
-<spring:url value="/" var="url" htmlEscape="true"/>
+<spring:url value="/home" var="url" htmlEscape="true"/>
 <div class="container">
 	<h2 class="form-signin-heading">Your result</h2>
 	<form:form id="form12" modelAttribute="question" method="post" action="${url}" class="form-signin">
